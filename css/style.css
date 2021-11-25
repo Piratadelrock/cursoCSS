@@ -1,0 +1,40 @@
+/* el orden de los selectores influye en las propiedades que le asignemos 
+    si por ejemplo movemos p.texto encima de p.especial, los colores cambiaran
+*/
+#titulo{
+   color: tomato; 
+}
+
+p.especial{
+    color : mediumseagreen;
+}
+
+p.texto {
+    color:slateblue;
+}
+
+/* en todas nuestras etiquetas div que contengan
+ hijos(nietos tataranietos...) de etiqueta p
+ en este caso no influye el orden de los selectores de arriba al de abajo porque estamos 
+ especificando los selectores dentro de otro */
+div p {
+    color:aquamarine;
+}
+
+div h2,div h3 {
+    color:brown;
+}
+
+* {
+    font-size: 24px;
+    color: black;
+}
+
+/* Tabla de portatiles */
+.superior {
+    border: double; 
+    border-color: red blue green black;
+}
+td,.izq{
+    border: 1px solid #000;
+}
