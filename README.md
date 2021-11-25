@@ -1,8 +1,8 @@
-# QUE ES CSS
+# CSS
     Cascading style sheets
     describe la presentacion de los docs HTML
     un doc HTML puede tener multiples estilos css
-        con un HTML se puede cambiar los css para que se vean de diferentes estilos el mismo doc html
+    con un HTML se puede cambiar los css para que se vean de diferentes estilos el mismo doc html
 
 # COMO FUNCIONA CSS (estructura)
     selectores: seleccionar elementos que se encuentren documento html, 
@@ -13,7 +13,7 @@
     propiedades: las propiedades son internas en las llaves. 
                 propiedad : el valor ;
 
-# formas de css 
+# Formas de css 
     dentro de etiquetas o elementos de html 
     <body  style="color: tomato;">
     dentro de la etiqueta head colocar un 
