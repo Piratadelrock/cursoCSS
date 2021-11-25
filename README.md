@@ -56,5 +56,21 @@
         color : black;
     }
 
+#COLORES 
+    Estos estan disponibles en la lista de colores de los editores como black, white, tomato, 
+        pero los principales son rgb, hexadecimal, y los hsl 
     
+    para un color hexadecimal, se coloca # seguido de 6 digitos 
+    0= maxima ausencia de color(LA AUSENCIA DEL COLOR ES NEGRO)
+    f= maxima expresion del color(LA EXPRESION DEL COLOR ES BLANCO) 
+    
+    podemos indicar los colores indicando 3 caracteres o los 6 caracteres 
+    * convencion
+    #000 nos entrega el color negro, si lo que hago es remplazar el primer digito
+        #f00: rojo, en su primer digito (en su mayor expresion)
+        #0f0: verde,en su segundo digito (en su mayor expresion)
+        #00f: azul, en su tercer digito (en su mayor expresion)
+    #ff0: amarillo, mientras mas alto sea el valor mas cercano al color blanco va a ser
+         significa que como f es mas alto colocar 2 efes sera mas claro y blanco 
+    #eee : gris suave
 

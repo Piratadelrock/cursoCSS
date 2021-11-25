@@ -30,6 +30,17 @@ div h2,div h3 {
     color: black;
 }
 
+.color{
+    /*los colores podran ser rgb hexadecimal o valores hsl  */
+            /* rojoverdeazul */
+    color: #eee;
+}
+
+
+
+
+
+
 /* Tabla de portatiles */
 .superior {
     border: double; 
