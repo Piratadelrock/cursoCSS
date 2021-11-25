@@ -74,3 +74,4 @@
          significa que como f es mas alto colocar 2 efes sera mas claro y blanco 
     #eee : gris suave
 
+  
