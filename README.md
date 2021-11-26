@@ -56,22 +56,159 @@
         color : black;
     }
 
-# COLORES 
+# PROPIEDADES CSS
+
+## UNIDADES DE MEDIDA DE CSS
+    asignar dimensiones a los elementos utilizando css antiguamente los monitores usaban cuadrados pequeños usando rgb para mostrar algo al usuario, se puede identificar en algun monitor de baja densidad, no ocurre con los telefonos porque tiene alta densidad de los pixeles.
+
+    un pixel es una unidad relativa que trata de hacer referencia a ese cuadrado de luz o led con el cual se puede generar imagenes
+    pero dependiendo del dispositivo esto podria representar mas de uno de esos cuadraditos, como un iphone o samsung de alta densidad de pixeles, un pixel equivale a 4 de esas luces, inclusive puede equivaler a mas si tiene mayor densidad de pixeles, 
+    un pixel es la unidad minima que se necesita para poder mostrar algo.
+
+    sin embargo, existen otras unidades son relativas que son relativas al tamaño del dispositivo, por ejemplo centimetros, pulgadas o milimetros 
+    si usamos centimetros, nos damos cuenta que no son exactamente 1 cm dependiendo del dispositivo que se este utilizando, por lo que no sera algo tan 
+    confiable, y tampoco significa que si damos 1cm esto se vera igual en todos los dispositivos, es subjetivo dependiendo de los dispositivos que se vea 
+
+        1cm no necesriamente sera 1 cm si pasamos a mm (milimetros)
+        ch
+        em
+        cm
+        mm
+        in 
+        pt (puntos)
+        pc (1picas son 12 puntos)
+        px
+    estas medidas no son recomendables usar para diferentes dispositivos es mejor usar medidas relativas a las fijas
+
+    2em (2veces el tamaño de la fuente que se esta utilizando actualmente,
+    cambia dependiendo del elemento que se esta usando)
+    2rem (relativo al tamaño de la fuente del elemento raiz, se encuentra dentro de nuestro html y es nuestra etiqueta html, se puede considerar 1 rem = 16px o 2rem=32px a no ser de que cambiemos el tamaño de la fuente que en este caso esta en 24px)
+
+## color PROPIEDAD
     Estos estan disponibles en la lista de colores de los editores como black, white, tomato, 
-        pero los principales son rgb, hexadecimal, y los hsl 
-    
+    pero los principales son rgb, hexadecimal, y los hsl 
+
+### Hexadecimal  
     para un color hexadecimal, se coloca # seguido de 6 digitos 
     0= maxima ausencia de color(LA AUSENCIA DEL COLOR ES NEGRO)
     f= maxima expresion del color(LA EXPRESION DEL COLOR ES BLANCO) 
     
     podemos indicar los colores indicando 3 caracteres o los 6 caracteres 
-    * convencion
-    #000 nos entrega el color negro, si lo que hago es remplazar el primer digito
-        #f00: rojo, en su primer digito (en su mayor expresion)
-        #0f0: verde,en su segundo digito (en su mayor expresion)
-        #00f: azul, en su tercer digito (en su mayor expresion)
-    #ff0: amarillo, mientras mas alto sea el valor mas cercano al color blanco va a ser
-         significa que como f es mas alto colocar 2 efes sera mas claro y blanco 
-    #eee : gris suave
 
-  
+    * convencion 3 digitos
+        #000 nos entrega el color negro, si lo que hago es remplazar el primer digito
+            #f00: rojo, en su primer digito (en su mayor expresion)
+            #0f0: verde,en su segundo digito (en su mayor expresion)
+            #00f: azul, en su tercer digito (en su mayor expresion)
+        #ff0: amarillo, mientras mas alto sea el valor mas cercano al color blanco va a ser
+            significa que como f es mas alto colocar 2 efes sera mas claro y blanco 
+        #eee : gris suave
+   
+    convencion 6 digitos #000000
+        los dos primeros ceros son rojos
+        los 2 del medio son verdes 
+        lso 2 finales son azul 
+
+### rgb
+    se ubica como    color: rgb(red, green, blue)
+    rgb(0,0,255)
+### rgba
+    para usar transparencia 
+    colocamos a y podremos agregar un 
+    1 mayor opacidad y 0 menor opacidad
+    se puede usar como si fuera rgb es decir dejandolo asi:
+         rgba(0, 0, 0); queda negro 
+
+    background-color: rgba(0, 0, 0,0.3); queda negro transparente y permite ver elementos detras de el
+    
+    opacity: es pasando la propiedad al elemento completo 
+    1 se ve completamente
+    0  no se ve en absoluto 
+    opacity: 0.3; 
+
+    esta oculta todo el texto porque el fondo era negro 
+    pero ahora vemos que el rojo es mas suave y el texto tambien es transparente
+    toma el elemento completo y no solo al color en especifico
+___
+
+    
+## border PROPIEDAD
+   
+    border: 5px gold ridge;
+    /* 
+        dotted
+        dashed
+        solid
+        double
+        groove - valores que se pueden asignar a objetos tridimensionales
+        ridge
+        inset
+        outsed
+        none
+        hidden
+    */
+    
+    border-style: groove;
+    border-color:blue;
+    border-radius: 5px;
+    border-width: 5px;
+___
+
+## background PROPIEDAD
+    indicando una imagen de fondo 
+        background-image:url('../img/coffee.png');
+        height: 300px;
+         background-size: cover;
+     
+    * auto: nos definira automaticamente la imagen respecto al tamaño del elemento 
+    * contain: sirve para contener la imagen en las medidas que le especifiquemos
+
+    * cover: nos cubrira la imagen unica usando el el ancho completo del elemento html, ADEMAS DE QUE SE ADAPTA MIENTRAS CAMBIA DE TAMAÑO LA PAGINA, COSA QUE LOS DEMAS NO HACE.
+
+    tambien asignamos dimensiones siendo el primero el ancho, el segundo el alto
+    background-size: 400px 400px;
+
+    /* asignamos alto de imagen */
+    /* height: 400px; */
+
+### background-repeat
+    background-repeat: no-repeat;
+    repetir en horizontal
+        background-repeat: repeat-x;
+    repetir en vertical
+        background-repeat: repeat-y;
+
+    height: 200px;
+    /* background-image:url('../img/coffee.png');
+    background-repeat: repeat-y;
+    /* primer valor es en el eje horizointal el otro es vertical 
+    o tambien valores de dimension */
+    /* background-position: center top; */ 
+## background en general
+    Se podra definir lo anterior en una sola linea 
+    el background size debe ir despues, no lo toma antes
+        background: #ff0 url('../img/coffee.png') repeat-y center bottom;
+        background-size: 100px 100px;
+        opcion con el size:
+        background: #ff0 url('../img/coffee.png') repeat-y center bottom / 100px 100px;
+## margen
+    para diferenciar 
+    background-color: chocolate;
+    
+    /* top right bottom left */
+    /* margin son espacios generados fuera del elemento */
+    margin: 15px 20px 25px 30px;
+    /* padding son espacios generados dentro del elemento */
+    padding: 30px 25px 20px 15px;
+    /* border esta afuera de pading pero dentro de margin, 
+    justo en el medio */
+    border: solid 1px black;
+
+# BOXMODEL CSS
+    boxmodel: margen, un border, un pading y el contenido.
+
+    Es como se posiciona cada elemento html en nuestro documento
+    y toda etiqueta va a tener un margen un border un padding y el contenido.
+    cuando especificamos la propiedad de width de un elemento 
+    estamos indicando solo el ancho que tendra el contenido que se encuentra dentro de la etiqueta, no contempla el margin ni el padin, ni el border, por lo que 
+    si queremos calcular el ancho completo que va a tener el elemento tendremos sumar todos estos elementos, el margin el border el pading 

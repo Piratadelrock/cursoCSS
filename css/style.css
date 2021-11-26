@@ -30,12 +30,102 @@ div h2,div h3 {
     color: black;
 }
 
-.color{
+.colorHex{
     /*los colores podran ser rgb hexadecimal o valores hsl  */
             /* rojoverdeazul */
-    color: #eee;
+    color: #ff0000;
+    /* 
+    #f es el mayor valor 
+    #ff identifica como los decimales del color, puede tomarse como 9 o 99 
+    se puede variar la intensidad del color del segundo digito 
+    asignado al color 
+    
+    */
 }
 
+.color{
+     /* border: 5px red ridge; */
+    /* 
+        dotted
+        dashed
+        solid
+        double
+        groove - valores que se pueden asignar a objetos tridimensionales
+        ridge
+        inset
+        outsed
+        none
+        hidden
+    */
+
+    border-style: groove ;
+    border-color:blue;
+    border-radius: 5px;
+    border-width: 2em;
+    /* 
+    1cm no necesriamente sera 1 cm si pasamos a mm (milimetros)
+        ch
+        em
+        cm
+        mm
+        in 
+        pt (puntos)
+        pc (1picas son 12 puntos)
+        px
+    */
+
+}
+
+#fondo {
+    /* como debe quedar */
+    background-color: rgba(255, 0, 0);
+    height: 200px;
+    background: #ff0 url('../img/coffee.png') repeat-y center bottom / 100px 100px;
+
+/* como seria separado
+    opacity oculta texto y fondo porque era negro 
+    pero ahora vemos que el rojo es mas suave y el texto tambien es transparente
+    toma el elemento completo y no solo al color en especifico
+    */
+    /* opacity: 0.3; */
+    /* indicando una imagen de fondo
+    background-image:url('../img/coffee.png');
+    background-repeat: repeat-y;
+    /* primer valor es en el eje horizointal el otro es vertical 
+    o tambien valores de dimension */
+  
+    /* background-position: center top; 
+    background-size: 100px 100px; */
+
+    /* asignamos alto de imagen */
+    /* height: 400px; */
+
+    
+}
+
+.margen {
+    background-color: chocolate;
+    /* top right bottom left */
+    /* margin son espacios generados fuera del elemento */
+    margin: 15px;
+    /* padding son espacios generados dentro del elemento */
+    /* quitando valores cambiara la forma del padding */
+    padding: 30px 15px 5px;
+    /* border esta afuera de pading pero dentro de margin, 
+    justo en el medio */
+    border: solid 1px black;
+    /* asi se puede salir el texto y la idea es que este dentro */
+    height: 100px;
+    width: 50px;
+    /* todo el contenido que no alcanza a mostrarse dentro del elemento 
+    lo oculta 
+    lo podemos cambiar por scroll y agrega barras laterales, 
+    y poder ver el contenido que tiene  */
+    overflow: scroll;
+    /* un borde pero externo */
+    outline: 1px red solid;
+
+}
 
 
 
