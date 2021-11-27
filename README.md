@@ -191,7 +191,7 @@ ___
         background-size: 100px 100px;
         opcion con el size:
         background: #ff0 url('../img/coffee.png') repeat-y center bottom / 100px 100px;
-## margen
+## margen margin
     para diferenciar 
     background-color: chocolate;
     
@@ -203,6 +203,27 @@ ___
     /* border esta afuera de pading pero dentro de margin, 
     justo en el medio */
     border: solid 1px black;
+     /* un borde pero externo antes del margin*/
+    outline: 1px red solid;
+## text 
+     /* si en caso de no ser cargada la primera seguira con la siguiente */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* left es por defecto, justyfy toma todo el ancho disponible*/
+    text-align:justify;
+    /* ancortag  */
+    /* text-decoration: underline ; */
+    /* text-decoration: line-through ; */
+    text-decoration: overline;
+    /* sombreado:
+    1erdato: cuanto se mueve a la derecha 
+    2do: cuanto se mueve hacia abajo 
+    3er da un color de sombra o agregando pixeles para mejorar el difuminado (blur)
+    4to el color
+    */
+    /* este texto aparece por detras  */
+    /* text-shadow: 3px 5px blue; */
+    /* este contiene blur para difuminar la sombra */
+    text-shadow: 3px 5px 5px blue;
 
 # BOXMODEL CSS
     boxmodel: margen, un border, un pading y el contenido.
@@ -212,3 +233,4 @@ ___
     cuando especificamos la propiedad de width de un elemento 
     estamos indicando solo el ancho que tendra el contenido que se encuentra dentro de la etiqueta, no contempla el margin ni el padin, ni el border, por lo que 
     si queremos calcular el ancho completo que va a tener el elemento tendremos sumar todos estos elementos, el margin el border el pading 
+

@@ -122,8 +122,31 @@ div h2,div h3 {
     lo podemos cambiar por scroll y agrega barras laterales, 
     y poder ver el contenido que tiene  */
     overflow: scroll;
-    /* un borde pero externo */
+    /* un borde pero externo antes del margin*/
     outline: 1px red solid;
+
+}
+
+.text{
+    /* si en caso de no ser cargada la primera seguira con la siguiente */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* left es por defecto, justyfy toma todo el ancho disponible*/
+    text-align:justify;
+    /* ancortag  */
+    /* text-decoration: underline ; */
+    /* text-decoration: line-through ; */
+    text-decoration: overline;
+    /* sombreado:
+    1erdato: cuanto se mueve a la derecha 
+    2do: cuanto se mueve hacia abajo 
+    3er da un color de sombra o agregando pixeles para mejorar el difuminado (blur)
+    4to el color
+    */
+    /* este texto aparece por detras  */
+    /* text-shadow: 3px 5px blue; */
+    /* este contiene blur para difuminar la sombra */
+    text-shadow: 3px 5px 5px blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
 
