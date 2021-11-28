@@ -108,8 +108,89 @@ th,td{
 th{
     background-color: tomato;
     color: white;
+    text-align: left;
+}
+/* seleccionar elementos sean pares o impares 
+dependiendo si esta en un listado o una tabla, dando colores a cada celda par o impar  
+odd = par 
+even = impar*/
+tr:nth-child(even){
+    background-color: #eee;
+
 }
 
+tr:hover{
+    background-color: #aaa;
+    cursor: pointer;
+}
+
+span{
+    /* 
+        block: todo el ancho }
+        inline-block: solo el contenido del elemento
+    */
+    display: block;
+    max-width: 300px;
+    background-color: #f00;
+    /* display:none; */
+    /* visibility: hidden; */
+}
+
+.inline{
+    display: inline-block;
+}
+
+#position {
+    /* valor por defecto static, vienen todos los elementos de html 
+    relative: es una posicion relativa a donde debiese estar posicionado este elemento
+    fixed: dice que tiene que tener una posicion con respecto a lo que se esta viendo en el explorador
+
+    */
+    position: sticky;
+    top: 5px;
+}
+
+.left{
+    float: left;
+    width:200px;
+    height: 200px;
+    background-color: red;
+}
+.container{
+    height: 200px;
+    /* background-color: #aaa; */
+}
+
+.right { 
+    float:right;
+    /* background-color: green; */
+}
+
+.column{
+    /* aniguamente se usaba para asignar columnas de esta manera */
+    border:solid 0px #ddd;
+    border-radius: 5px;
+    margin: 0 ;
+    padding: 10px 0;
+    width: 33.3%;
+}
+
+.inline-block{
+    display: inline-block;
+    height: 55px;
+    background-color: red;
+}
+
+.center{
+    padding: 50px 0;
+    width: 200px;
+    margin: 0 auto;
+    background-color: aqua;
+}
+/* 
+.right{
+    float:right;
+} */
 /* Tabla de portatiles */
 /* .superior {
     border: double; 

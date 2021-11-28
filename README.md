@@ -290,14 +290,106 @@ ___
 
 # tablas 
     
-    tabla sencilla
+    se puede interactuar de varias formas con las tablas, dandole colores centrando textos un ejemplo seria:
+
     table {
-    width: 100%;
-    /* eliminando espacio entre celdas */
-    border-collapse: collapse;
+        width: 100%;
+        /* eliminando espacio entre celdas */
+        border-collapse: collapse;
     }
 
     th,td{
         border: solid 1px #eee;
+        padding: 5px;
 
+    }
+    th{
+        background-color: tomato;
+        color: white;
+        text-align: left;
+    }
+
+    tr:hover{
+        background-color: #aaa;
+    }
+    /* seleccionar elementos sean pares o impares 
+    dependiendo si esta en un listado o una tabla, dando colores a cada celda par o impar  
+    odd = par 
+    even = impar
+    SUGERENCIA: no quise mover esta propiedad para que se den cuenta de que debe estar arriba de la propiedad anterior hover, para demostrar que se esta seleccionando */
+
+    tr:nth-child(even){
+        background-color: #eee;
+    }
+
+# display
+    nos indica como nosotros vamos a colocar los elementos del html en el documento 
+    " la etiqueta de span hace una seleccion silenciosa de nuestros elementos, pero cuando trabajabamos con los divs o p esta necesariamente hacia un salto de linea."
+
+    En la mayoria de elementos viene la propiedad de display:block;
+
+    usando la etiqueta div y span se puede comparar que abarca todo el documento o solo el elemento en el caso de span, haciendo una modificacion del elemnto span podemos hacer que se vuelva block
+
+    span{
+        display: block;
+    }
+    tambien podemos modificar los divs, podemos darle una clase y usar display: inline-block;
+    se puede usar las siguientes propiedades:
+    block: todo el ancho
+    inline-block: solo el contenido del elemento
+
+    height y width pueden ser asignados a inline-block la propiedad inline no puede ser aplicado 
+    inline block se usa mucho para menus navegacion siempre que tenga los links de izq a der o der a izq  de esta manera se le puede asignar un ancho fijo y pueda estar de manera uniforme
+
+# ocultar elementos 
+    display:none;
+    visibility: hidden;
+
+# widh y max-width
+    max-width: 300px; se vuelve dinamico y reduce su tamaño o maximiza su tamaño hasta los 300
+    width: 300px; se mantiene los 300 
+
+# position 
+        
+    valor por defecto: 
+    * static, vienen todos los elementos de html 
+    relative: es una posicion relativa a donde debiese estar posicionado este elemento
+    
+    position: relative;
+    left: 20px;
+    /* top: 25px; */
+
+    fixed: dice que tiene que tener una posicion con respecto a lo que se esta viendo en el explorador
+    digamos que el elemento se mantiene en la pagina 
+    position: fixed;
+
+    lo que hace absolute ocurre lo mismo que fixed pero no se mueve, este se posiciona relativo con el elemento padre mas cercano que este tenga, y en caso de no existir un elemento padre se pegara a body 
+    position: absolute
+
+    sticky: esta tomando la posicion que le corresponde, si hace scroll no realiza nada, pero si se le agrega la propiedad top empieza a realizar algo 
+    mezcla de relative y fixed
+    position: sticky;
+    left: 20px;
+    top: 25px;
+
+# flotante float
+    como el elemento esta dentro de otro elemento se puede notar que un elemento queda flotante hacia el lado donde lo posicione, en este caso se posiciona a la izquierda, el div que lo contiene tiene una altura definida y tiene un ancho de 100, pero el que tiene el ancho de 100 solo es el ellemento flotante de la izquierda, sin embargo todo el resto del contenido se desplazo hacia abajo no asi el elemento que se encuentra al lado, y es porque seencuentran dentro del mismo div
+
+    toma el elemento y dentro de la etiqueta html en la que se encuentre lo va a hacer flotar a la izquierda
+
+   .left{
+        float: left;
+        width:100px;
+    }
+# CENTRAR CON CSS
+    margin: 0 auto; 
+    indicando el 0 top y bottom no se centre veritcalmente 
+    auto se centra horizontalmente
+    dandole un padding vertical de 50px y 0 en horizonal podemos centrar el texto verticalmente, el text aling centrara horizontalmente
+    .center{
+        padding: 50px 0;
+        text-align: center;
+        width: 200px;
+        margin: 0 auto;
+        background-color: aqua;
     }
