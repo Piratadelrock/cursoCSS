@@ -56,6 +56,10 @@
         color : black;
     }
 
+    /* el orden de los selectores influye en las propiedades que le asignemos 
+    si por ejemplo movemos p.texto encima de p.especial, los colores cambiaran
+*/
+
 # PROPIEDADES CSS
 
 ## UNIDADES DE MEDIDA DE CSS
@@ -155,6 +159,29 @@ ___
 ___
 
 ## background PROPIEDAD
+
+
+#fondo {
+    /* como debe quedar */
+    background-color: rgba(255, 0, 0);
+    height: 200px;
+    background: #ff0 url('../img/coffee.png') repeat-y center bottom / 100px 100px;
+
+    /* opacity: 0.3; */
+    /* indicando una imagen de fondo
+    background-image:url('../img/coffee.png');
+    background-repeat: repeat-y;
+    /* primer valor es en el eje horizointal el otro es vertical 
+    o tambien valores de dimension */
+  
+    /* background-position: center top; 
+    background-size: 100px 100px; */
+
+    /* asignamos alto de imagen */
+    /* height: 400px; */
+
+    
+}
     indicando una imagen de fondo 
         background-image:url('../img/coffee.png');
         height: 300px;
@@ -200,14 +227,22 @@ ___
     margin: 15px 20px 25px 30px;
     /* padding son espacios generados dentro del elemento */
     padding: 30px 25px 20px 15px;
+    /* quitando valores cambiara la forma del padding */
     /* border esta afuera de pading pero dentro de margin, 
     justo en el medio */
     border: solid 1px black;
-     /* un borde pero externo antes del margin*/
+       /* todo el contenido que no alcanza a mostrarse dentro del elemento 
+    lo oculta 
+    lo podemos cambiar por scroll y agrega barras laterales, 
+    y poder ver el contenido que tiene  */
+    overflow: scroll;
+    /* un borde pero externo antes del margin*/
     outline: 1px red solid;
+
 ## text 
      /* si en caso de no ser cargada la primera seguira con la siguiente */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+
     /* left es por defecto, justyfy toma todo el ancho disponible*/
     text-align:justify;
     /* ancortag  */
@@ -223,7 +258,12 @@ ___
     /* este texto aparece por detras  */
     /* text-shadow: 3px 5px blue; */
     /* este contiene blur para difuminar la sombra */
-    text-shadow: 3px 5px 5px blue;
+    text-shadow: 3px 5px 5px blue;}
+
+    para fuentes customisadas
+        google font la mayoria son gratis
+    buscamos y seleccionamos la fuente deseada y nos podremos descargar la fuente o podemos usar 
+    en el html del head el link de la fuente 
 
 # BOXMODEL CSS
     boxmodel: margen, un border, un pading y el contenido.
@@ -234,3 +274,30 @@ ___
     estamos indicando solo el ancho que tendra el contenido que se encuentra dentro de la etiqueta, no contempla el margin ni el padin, ni el border, por lo que 
     si queremos calcular el ancho completo que va a tener el elemento tendremos sumar todos estos elementos, el margin el border el pading 
 
+# links 
+    los links en html pueden tener 4 estados 
+        no ha sido visitado 
+        ha sido visitado 
+        se pasa por mouse encima de el 
+        se encuentra activo
+    * seleccionar todos los links 
+
+    a:link{} estamos indicando a css, queremos es seleccionar 
+    cuando el link no ha sido seleccionado
+    a:visited{} indica los visitados
+    a:hover{} indica el puntero encima del link
+    a:active{} cuando pincho el link (activo)
+
+# tablas 
+    
+    tabla sencilla
+    table {
+    width: 100%;
+    /* eliminando espacio entre celdas */
+    border-collapse: collapse;
+    }
+
+    th,td{
+        border: solid 1px #eee;
+
+    }
