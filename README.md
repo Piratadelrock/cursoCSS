@@ -393,3 +393,5 @@ ___
         margin: 0 auto;
         background-color: aqua;
     }
+
+   con lo que se aprendio hasta ahora se puede dar cualquier estilo a cualquier elemento, usando el selector de hover, en un boton se puede cambiar el color para cuando se pase cambie de color, suponiendo que "es presionable"

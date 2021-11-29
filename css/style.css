@@ -27,7 +27,7 @@ div h2,div h3 {
     font-size: 24px;
 
     /* se deshabilita para colocar colores a los links */
-    /* color: black; */
+    color: black;
 }
 
 .colorHex{
@@ -78,7 +78,7 @@ a:visited{
     color:gray;
 }
 a:hover{
-    color: yellow;
+    color: black;
 }
 /* cuando pincho el link */
 a:active{
@@ -186,7 +186,21 @@ span{
     width: 200px;
     margin: 0 auto;
     background-color: aqua;
+    text-align: center;
 }
+
+/* aqui termina el css basico  */
+
+
+/* aqui inicia micss */
+button a{
+    text-decoration: none;
+}
+.blogButton:hover{
+    background-color: aqua;
+    border-radius: 20px;
+}
+
 /* 
 .right{
     float:right;
