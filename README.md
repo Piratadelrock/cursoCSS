@@ -51,6 +51,7 @@
 
     selector universal: este posee un catch o truco o maña, aplica las propiedades solo si estas no han sido definidas por otros selectores 
     que dependiendo del orden que escribamos nuestro css, es como se ira aplicando este estilo 
+    
     por lo que si queremos realizar un override o queremos reemplazar un estilo de css a una etiqueta que se halla escrito mas arriba, y se coloque al final, esto quiere decir que color deberia remplazar a todos los demas colores que se an puesto anteriormente 
     *{
         color : black;
