@@ -396,3 +396,131 @@ ___
     }
 
    con lo que se aprendio hasta ahora se puede dar cualquier estilo a cualquier elemento, usando el selector de hover, en un boton se puede cambiar el color para cuando se pase cambie de color, suponiendo que "es presionable"
+
+# HTML SEMANTICO
+	para indicar si hay una barra lateral un menu de navegacion etc
+
+	<article> artigulo de la pagina
+	<aside>barra lateral del menu            
+	<figcaption>imagen y texto descriptivo de las imagenes  
+	<figure> hace de la imagen en si
+	<header> encabezado
+	<footer>pie de pagina
+	<main> contenido principal(que si alguien busca por el contenido lo encuentre)
+	<nav>menu de navegacion  
+	<section> seccion de la pagina
+	<time>ira dentro un reloj, o cualquier cosa de tiempo
+
+	div es un contenedor no semantico pero que ayuda a maquetar el contenido de la pagina
+	por ejemplo para dos secciones diferenciadas se realiza dos divs con textos y demas
+	en inspeccionar elemento se ve un color naranja o el mas grande  seria el contenedor
+
+	*se debe indicar semanticamente cada cosa para que se pueda encontrar mejor en los buscadores
+	*normalmente seria header y dentro del header el nav 
+
+	header
+		nav 
+
+	article   	   aside 
+		figure
+
+	footer
+
+	<form>  como por ejemplo para que el cliente se comunique con nosotros 
+			se crea un form para indicar a html que apartir de ahora sera un formulario 
+			lo que valla dentro del form seran elementos que el cliente pueda introduccir datos 
+			selecionando entre diferentes soluciones y demas
+			sus atributos serian 
+		
+	<form action="" method="">
+		*action: que indica la url, puede ser cualquier pagina o una
+		api para redirigir esa informacion(destino)
+		*method: GET POST PUT DELETE
+		*
+	<label for="nombre">Nombre:</label>
+		suele ir acompañado de imput para introducir los elementos solicitados
+		*for para que objeto
+	<input type="text">
+		type 
+		*text cajon para escribir 
+		*number solo se puede ingresar numeros
+		*password oculta el texto
+
+
+~~~
+html:5
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        </meta>
+		<!-- se le da compatibilidad a otros navegadores que no tienen ciertas propiedades porque no renderizan de la misma manera y dejan por un lado 
+		ciertas opciones -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- contenedor visual de la aplicacion, viewport, sea multidispositivo por el content device-width el tamaño del dispositivo  -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		    <title>
+                estructura basica
+            </title>
+    </head>
+    <body>
+    </body>
+</html>
+
+<!-- html>head+body -->
+<html>
+    <head>
+		<nav><a href="index.html">inicio</a></nav>   
+
+    </head>
+    <body>
+		<p>elementos que se pueden escribir para crear mas rapido etiquetas</p>
+		<section id="editable" contenteditable="true">
+			<ol>
+				<li>html:5</li>
+				<li>html>head+body</li>
+				<li>div.caja>ul>li*5>a</li>
+				<li>ul#nav>li.item$*4>a{Item $}</li>
+				<li>h1.title>span.span</li>
+				<li>ul>li*5>a</li>
+				<li>.content</li>
+				
+			</ol>
+	</section>
+			<!-- div.caja>ul>li*5>a 
+			<div class="caja">
+				<ul>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+				</ul>
+			</div>
+	
+	
+			ul#nav>li.item$*4>a{Item $} 
+			<ul id="nav">
+				<li class="item1"><a href="">Item 1</a></li>
+				<li class="item2"><a href="">Item 2</a></li>
+				<li class="item3"><a href="">Item 3</a></li>
+				<li class="item4"><a href="">Item 4</a></li>
+			</ul>
+	
+			 h1.title>span.span 
+			<h1 class="title"><span class="span"></span></h1>
+			 ul>li*5>a 
+			<ul>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+			</ul>
+	
+			 .content
+			<div class="content"></div>
+			 -->
+    </body>
+</html>
+~~~

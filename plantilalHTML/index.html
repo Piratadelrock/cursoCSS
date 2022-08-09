@@ -1,0 +1,121 @@
+<!-- quirks mode: modo de navegacion años 90 si no se coloca el !DOCTYPE html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>mi primera web</title>
+    <style>
+        table, th,td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- una tabla se divide en filas y columnas
+    tr es table row, fila dentro de tabla (genera filas)
+    th indica una cabecera table head, elementos centrados (genera columnas)
+    td define elementos estandar alineados a la izquierda estandar (tambien genera columnas, tener cuidado con las referencias)  -->
+    <table style="width: 300px; height:200px">
+        <!-- indicando que es una cabecera -->
+        <thead>
+            <tr>
+                <th>producto</th>
+                <th>precio</th>
+            </tr>
+        </thead>
+        <!-- indica el cuerpo de la tabla  -->
+        <tbody>
+            <tr>
+                <td>hola beats</td>
+                <td>gratis</td>
+            </tr>
+            <tr>
+                <td>chanchito feliz</td>
+                <td>19.90$</td>
+            </tr>
+       
+        </tbody>
+        <tfoot>
+            <td></td>
+            <td>Total: 50.90$</td>
+        </tfoot>
+    </table>
+
+    <!-- ul lista no ordenada -->
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+    <!-- ol es una lista ordenada -->
+    <ol>
+        <li value="50">Elemento 1</li>
+        <li value="50">Elemento 2</li>
+        <li>
+            <ol>    
+                <li style="list-style-type: lower-alpha;">subElemento 1</li>
+                <li style="list-style-type: lower-roman;">subElemento 2</li>
+                <li style="list-style-type: square;">subElemento 3</li>
+
+            </ol>
+        </li>
+    </ol>
+    <!--action contiene ruta para indicar a donde vamos a enviar los datos,
+        puede ser una ruta, o dentro de otra aplicacion 
+    si se encarga de un framework que se encarga de ocultar las extensiones de nuestros archivos, solo ponemos 
+    /formulario
+    method get o post (ninguna es segura)
+    utilizando certificados de encriptacion de las conexiones -->
+    <form action="/formulario.php" method="GET">
+        <!-- agregando identificador hara foco al input 
+        propiedad name para el servidor
+        para que interprete los datos del formulario 
+        con el nombre que se le indique, 
+        tendran una llave(name) y valor(los datos del input)
+        placeholder es para indicar tipo de dato dentro del input
+        propiedades de type: submit,text,email,file-->
+        <label for="nombre">Nombre</label>
+        <input value="valor defecto" id="nombre" name="nombre" placeholder="Nombre" type="text">
+        <br>
+        <label for="apellido">apellido</label>
+        <input id="apellido" name="apellido" placeholder="apellido" type="text">
+       
+        <br>
+        <Label for="comentario">Comentario</Label>
+        <textarea cols="50" rows="10" id="comentario" placeholder="comentario" name="comentario">valor defecto</textarea>
+        <br>
+        <!-- tomara todos los valores de los campos del formulario para enviarlos a un servidor, y usando action del form -->
+        <!-- <input type="submit" /> -->
+        <!-- boton tipo button no enviara ni hara nada, se debe especificar con js
+        ser explicito con el tipo de boton que se coloca -->
+        <button type="button"><img src="../img/facebook-wrap.png">tipo boton</button>
+        <button type="reset">Tipo RESET</button>
+        <button type="submit">tipo submit</button>
+    </form>
+    
+    <h1>primer heading</h1>
+    <h2>segundo heading</h2>
+    <h3>tercero heading</h3>
+    <h4>cuarto heading</h4>
+    <h5>quinto heading</h5>
+    <h6>sexto heading</h6>
+    <p>feliz muy feliz</p>
+    <p>triste muy triste</p>
+    <hr>
+    <p>texto un poco mas</p>
+    <p>texto un poco mas</p>
+    <!-- si tenemos una etiqueta de parrafo extenso y queremos identificar una parte de el
+    podemos usar el span, que hace una seleccion silenciosa del texto o elementos html que se encuentren
+    en la web -->
+    <p>
+        este texto es <span style="color:blue;">mucho mas largo</span> 
+        y mostrar <br>
+        la etiqueta span
+    </p>
+    <a href="https://google.co.nz" target="_blank">ir a google</a>
+    <a href="../index.html">Volver</a>
+    <!-- pasando solo el valor de la altura o anchura de la img se mantendra la relacion de aspecto -->
+    <img src="https://cdn.pixabay.com/photo/2015/11/04/20/59/milky-way-1023340_960_720.jpg" alt="universo" width="80%" />
+    
+    
+</body>
+</html>

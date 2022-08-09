@@ -2,53 +2,50 @@
 <html lang="en">
 <head>
     <title>BlogOn</title>
-    <link rel="stylesheet" href="./css/blogS.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
-
-    <!-- se utiliza para agrupar links, imagen o 
-        logo de pagina, tantas como queramos, siempre y cuando
+    <!-- se utiliza para agrupar links, imagen o logo de pagina, tantas como queramos, siempre y cuando
     no se coloquen dentro de otra header, o dentro de footer 
 
     los atributos de las etiquetas se pueden dar un id unico, y no iguales a los demas, pero si se puede con class-->
-    <header id="titulo"> 
-        <h1>Blog de chanchito feliz</h1>
+    <header> 
+        <h1 id="titulo">Blog ON</h1>
     </header>
+    <div class="titulo"> 
+        <p>soy parrafo dentro de div, que contiene esta informacion, para dividr contenido, o agrupar como por secciones,
+            tiene la misma funcionalidad que el section, es mas viejo que secction y article, y saldran muchas etiquetas de
+            div, que dentro de div estara otra dentro de div, dentro de otra, o tener un parrafo que se encuentre dentro de varias 
+            etiquetas de div 
+        </p>
+    </div>
         <!--section: secciones de aplicacion que se puede colocar cualquier etiqueta dentro de seccion -->
-         <section class="container">
+         <section >
         <!-- article define los post del blog -->
             <article class="post">
                 <h2>Titulo del post</h2>
                 <p>descripcion del post</p>
-                <img src="img/coffee.png" width="400">
+                <img src="img/coding-02.jpg" width="200">
                 <p>texto del articulo que hay aca y es texto de prueba</p>
             </article>
             <article class="post">
                 <h2>Titulo del post 2 </h2>
                 <p>descripcion del post 2</p>
-                <img src="img/monster.png" width="400">
+                <img src="img/coding-01.jpg" width="200">
                 <p>texto del articulo 2 que hay aca y es texto de prueba</p>
             </article>
             <article class="post">
                 <h2>Titulo del post 3 </h2>
                 <p>descripcion del post 3</p>
-                <img src="img/guitarra.png" width="400">
+                <img src="img/coding-06.jpg" width="200">
                 <p>texto del articulo 3 que hay aca y es texto de prueba</p>
             </article>
         </section>
-        <div id="aside"></div>
   
     <!-- pie de pagina como informacion de contacto, links para volver a la pagina web, info del autor, o copyright -->
     <footer>
-       <section>
-            <a href="#titulo">Ir arriba</a>
-            <a href="mailto:ejrocko@hotmail.com">ejrocko@hotmail.com</a>
-       </section>
-       <p>Copyright 2021 &copy;</p>
+        <a href="#titulo">Ir arriba</a>
+        <a href="mailto:ejrocko@hotmail.com">ejrocko@hotmail.com</a>
+        <p>Copyright 2021 &copy;</p>
     </footer>
 </body>
 </html>

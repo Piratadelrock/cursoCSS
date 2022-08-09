@@ -3,6 +3,9 @@
    color: tomato; 
 }
 
+#aside{
+   background-color: tomato;
+}
 p.especial{
     color : mediumseagreen;
 }
